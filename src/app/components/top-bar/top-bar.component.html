@@ -1,0 +1,29 @@
+<div class="main">
+  <div style="display: inline-block;">
+    <div style="display: inline-block; margin-top: 25px; margin-left: 40px">
+    <svg width="80" height="81" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M90 179C139.153 179 179 139.153 179 90C179 40.8467 139.153 1 90 1C40.8467 1 1 40.8467 1 90C1 139.153 40.8467 179 90 179Z" stroke="#000000" stroke-width="2"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.26093 91.1484L91.1484 4.26092L178.036 91.1484L91.1484 178.036L4.26093 91.1484Z" stroke="#000000" stroke-width="2"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M141 55H41L91 178L141 55Z" stroke="#000000" stroke-width="2"/>
+    </svg>
+  </div>
+  </div>
+  <h1 style="margin-left: 15px; margin-top: 50px; display: inline-block;">
+    <span (click)="router.navigate(['']);" class="name">головоломка</span>
+    <span class="about-me">
+      designed and coded
+      <br>
+      by Boris Kiva
+    </span>
+  </h1>
+
+  <div *ngIf="placeService.place != 11" style="margin-right: 80px; margin-top: 55px; float: right; display:inline-block;">
+    <div  id="tasks" *ngFor="let use of placeService.used; index as i">
+      <a class="task-box" [class.selected]="placeService.used[i]" *ngIf="i != 0" (click)="go(i)">
+        <div class="chosen" [class.selected]="placeService.place == i"><p align="center" style="margin-top: 3px;">{{i}}</p></div>
+      </a>
+    </div>
+
+    <div (click)="router.navigate(['finish'])" id="finish-button"><p align="center">закончить</p></div>
+  </div>
+</div>

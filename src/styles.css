@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  overflow-x: hidden;
+  padding: 0;
+  user-focus-key: none;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+p, a, h1, div {
+  overflow: hidden;
+  cursor: default;
+}
