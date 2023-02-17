@@ -13,6 +13,7 @@ import {Task9Component} from "../components/tasks/task9/task9.component";
 import {FinishPageComponent} from "../components/finish-page/finish-page.component";
 import {Task10Component} from "../components/tasks/task10/task10.component";
 import {AchiveComponent} from "../components/achive/achive.component";
+import {VkComponent} from "../components/vk/vk.component";
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'task10', component: Task10Component },
   { path: 'finish', component: FinishPageComponent },
   { path: 'arch', component: AchiveComponent },
+  { path: 'vk', component: VkComponent },
 ];
 
 @NgModule({

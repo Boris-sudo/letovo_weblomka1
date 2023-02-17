@@ -24,8 +24,13 @@ export class StartPageComponent implements OnInit {
   }
 
   go(): void {
-    let next = this.placeService.levels[this.placeService.not_finished];
-    this.router.navigate([next]);
+    var to_go = 0;
+    for (let i = 0; i <= 11; i++)
+      if (!this.placeService.used[i]) {
+        to_go = i;
+        break;
+      }
+    this.router.navigate([this.placeService.levels[to_go]]);
   }
 
   go_from_start(): void {

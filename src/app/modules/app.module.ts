@@ -18,6 +18,7 @@ import {FinishPageComponent} from "../components/finish-page/finish-page.compone
 import {Task10Component} from "../components/tasks/task10/task10.component";
 import {TopBarComponent} from "../components/top-bar/top-bar.component";
 import {AchiveComponent} from "../components/achive/achive.component";
+import {VkComponent} from "../components/vk/vk.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {AchiveComponent} from "../components/achive/achive.component";
     FinishPageComponent,
     TopBarComponent,
     AchiveComponent,
+    VkComponent,
   ],
   imports: [
     BrowserModule,
